@@ -32,11 +32,6 @@ $(".prev").click(function () {
     owl.trigger("prev.owl.carousel");
 });
 
-// particles
-particlesJS.load('particles-js', './lib/particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
-});
-
 // counter
 var a = 0;
 $(window).scroll(function() {
@@ -88,6 +83,8 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+mybutton.addEventListener('click', topFunction);
+
 let nav = document.getElementById("navbar");
 let sticky = nav.offsetTop;
 
@@ -100,3 +97,8 @@ function sticker() {
         nav.classList.remove("sticky");
     }
 }
+
+// particles
+particlesJS.load('particles-js', './lib/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+});
